@@ -14,6 +14,7 @@ import { Project, projects } from "@/lib/projects";
 import { ExternalLink, Github, Users } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { useTheme } from "@/lib/theme-context";
 
 export default function Projects() {
   return (
@@ -39,13 +40,17 @@ export default function Projects() {
 
 function ProjectCard({ project }: { project: Project }) {
   const [imageError, setImageError] = useState(false);
+  const { theme } = useTheme();
+
+  const currentimage =
+    theme === "dark" ? project.imageUrl.dark : project.imageUrl.light;
 
   return (
     <Card className="overflow-hidden">
       <div className="bg-muted relative aspect-video overflow-hidden">
         {!imageError ? (
           <Image
-            src={project.imageUrl}
+            src={currentimage}
             alt={`${project.title} screenshot`}
             fill
             className="object-cover"
@@ -60,7 +65,7 @@ function ProjectCard({ project }: { project: Project }) {
               </div>
               <p className="text-sm font-medium">{project.title}</p>
               <p className="text-muted-foreground text-xs">
-                Add screenshot to public/{project.imageUrl}
+                Add screenshot to public/{currentimage}
               </p>
             </div>
           </div>

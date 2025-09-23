@@ -6,7 +6,7 @@ export interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
-  imageUrl: string;
+  imageUrl: { light: string; dark: string };
   type: "frontend" | "fullstack" | "backend";
   teamSize: number;
   myRole: string;
@@ -22,7 +22,10 @@ export const projects: Project[] = [
     technologies: ["Next.js", "Spring Boot", "MongoDB", "PostgreSQL"],
     githubUrl: "https://github.com/oudomm",
     liveUrl: "https://api-ngin.oudom.dev",
-    imageUrl: "/project1.png",
+    imageUrl: {
+      light: "/projects/api-ngin-light.png",
+      dark: "/projects/api-ngin-dark.png",
+    },
     type: "fullstack",
     teamSize: 8,
     myRole:
@@ -37,7 +40,10 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/ui"],
     githubUrl: "https://github.com/yourusername/portfolio", // You'll update this later
     liveUrl: "#", // You'll update this when deployed
-    imageUrl: "/project2.png",
+    imageUrl: {
+      light: "/projects/portfolio-light.png",
+      dark: "/projects/portfolio-dark.png",
+    },
     type: "frontend",
     teamSize: 1,
     myRole:

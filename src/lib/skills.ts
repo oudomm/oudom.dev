@@ -37,8 +37,8 @@ export const skillsData: SkillCategory[] = [
   {
     category: "Frontend",
     skills: [
-      { name: "React", icon: SiReact },
       { name: "Next.js", icon: SiNextdotjs },
+      { name: "React", icon: SiReact },
       { name: "TypeScript", icon: SiTypescript },
       { name: "JavaScript", icon: SiJavascript },
       { name: "Tailwind CSS", icon: SiTailwindcss },
@@ -70,8 +70,8 @@ export const skillsData: SkillCategory[] = [
     skills: [
       { name: "GitHub", icon: SiGithub },
       { name: "Git", icon: SiGit },
-      { name: "VS Code", icon: DiVisualstudio },
       { name: "Vercel", icon: SiVercel },
+      { name: "VS Code", icon: DiVisualstudio },
       { name: "IntelliJ IDEA", icon: SiIntellijidea },
     ],
   },

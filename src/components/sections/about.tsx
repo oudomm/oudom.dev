@@ -71,13 +71,13 @@ export default function About() {
             </h3>
             <div className="grid gap-6 text-center md:grid-cols-3">
               <div>
-                <div className="text-primary mb-2 text-2xl font-bold">2+</div>
+                <div className="text-primary mb-2 text-2xl font-bold">5+</div>
                 <p className="text-muted-foreground text-sm">
                   Projects Completed
                 </p>
               </div>
               <div>
-                <div className="text-primary mb-2 text-2xl font-bold">10+</div>
+                <div className="text-primary mb-2 text-2xl font-bold">15+</div>
                 <p className="text-muted-foreground text-sm">
                   Technologies Learned
                 </p>

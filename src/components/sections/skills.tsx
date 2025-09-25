@@ -4,7 +4,7 @@ import { skillsData, learningSkills } from "@/lib/skills";
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-muted/30 px-4 py-20">
+    <section id="skills" className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">

@@ -1,11 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Github, Linkedin, MapPin, Calendar } from "lucide-react";
+import { Mail, Github, Linkedin, Send, MapPin, Calendar } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-muted/30 px-4 py-20">
+    <section id="contact" className="px-4 py-20">
       <div className="mx-auto max-w-4xl">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">
@@ -39,14 +39,14 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-3">
-                <Github className="text-muted-foreground h-5 w-5" />
+                <Send className="text-muted-foreground h-5 w-5" />
                 <a
-                  href="https://github.com/oudomm"
+                  href="https://t.me/oudommmmm"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
                 >
-                  github.com/oudomm
+                  t.me/in/oudommmmm
                 </a>
               </div>
 
@@ -59,6 +59,18 @@ export default function Contact() {
                   className="text-primary hover:underline"
                 >
                   linkedin.com/in/oudomm
+                </a>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Github className="text-muted-foreground h-5 w-5" />
+                <a
+                  href="https://github.com/oudomm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  github.com/oudomm
                 </a>
               </div>
 
@@ -108,9 +120,9 @@ export default function Contact() {
               <div>
                 <p className="mb-2 font-medium">Work Preference</p>
                 <div className="flex flex-wrap gap-2">
+                  <Badge variant="outline">On-site</Badge>
                   <Badge variant="outline">Remote</Badge>
                   <Badge variant="outline">Hybrid</Badge>
-                  <Badge variant="outline">On-site</Badge>
                 </div>
               </div>
             </CardContent>

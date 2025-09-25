@@ -12,7 +12,7 @@ export default function Hero() {
         </h1>
 
         <h2 className="text-muted-foreground mb-8 text-xl md:text-2xl">
-          Full-Stack Web Developer Student
+          Full-Stack Web Developer
         </h2>
 
         <p className="text-muted-foreground mx-auto mb-10 max-w-2xl text-lg md:text-xl">

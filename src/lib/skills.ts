@@ -50,8 +50,8 @@ export const skillsData: SkillCategory[] = [
     category: "Backend",
     skills: [
       { name: "Spring Boot", icon: SiSpringboot },
-      { name: "FastAPI", icon: SiFastapi },
       { name: "Node.js", icon: SiNodedotjs },
+      { name: "FastAPI", icon: SiFastapi },
       { name: "Java", icon: FaJava },
       { name: "Python", icon: SiPython },
       { name: "REST APIs", icon: FaServer },

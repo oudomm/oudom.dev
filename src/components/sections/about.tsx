@@ -32,11 +32,11 @@ export default function About() {
             <div>
               <h3 className="mb-3 text-xl font-semibold">My Journey</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I&apos;m a passionate web development student driven by the
-                desire to solve real-world problems through technology. I
-                believe that even small changes in code can create big impacts
-                on people&apos;s daily lives, and that&apos;s what motivates me
-                to write better software every day.
+                I&apos;m a passionate web developer driven by the desire to
+                solve real-world problems through technology. I believe that
+                even small changes in code can create big impacts on
+                people&apos;s daily lives, and that&apos;s what motivates me to
+                write better software every day.
               </p>
             </div>
 

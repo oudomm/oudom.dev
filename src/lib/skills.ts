@@ -14,13 +14,13 @@ import {
   SiGithub,
   SiVercel,
   SiDocker,
-  SiFastapi,
   SiPython,
   SiGooglecloud,
   SiGithubactions,
   SiIntellijidea,
+  SiExpress,
 } from "react-icons/si";
-import { FaDatabase, FaServer, FaJava } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
 import { DiVisualstudio } from "react-icons/di";
 
 export interface Skill {
@@ -50,11 +50,10 @@ export const skillsData: SkillCategory[] = [
     category: "Backend",
     skills: [
       { name: "Spring Boot", icon: SiSpringboot },
+      { name: "Express.js", icon: SiExpress },
       { name: "Node.js", icon: SiNodedotjs },
-      { name: "FastAPI", icon: SiFastapi },
       { name: "Java", icon: FaJava },
       { name: "Python", icon: SiPython },
-      { name: "REST APIs", icon: FaServer },
     ],
   },
   {
@@ -62,7 +61,6 @@ export const skillsData: SkillCategory[] = [
     skills: [
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "MongoDB", icon: SiMongodb },
-      { name: "Database Design", icon: FaDatabase },
     ],
   },
   {

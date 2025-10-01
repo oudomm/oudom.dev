@@ -19,6 +19,9 @@ import {
   SiGithubactions,
   SiIntellijidea,
   SiExpress,
+  SiSqlite,
+  SiMysql,
+  SiFastapi,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { DiVisualstudio } from "react-icons/di";
@@ -49,26 +52,31 @@ export const skillsData: SkillCategory[] = [
   {
     category: "Backend",
     skills: [
-      { name: "Spring Boot", icon: SiSpringboot },
       { name: "Express.js", icon: SiExpress },
       { name: "Node.js", icon: SiNodedotjs },
+      { name: "Spring Boot", icon: SiSpringboot },
       { name: "Java", icon: FaJava },
+      { name: "FastAPI", icon: SiFastapi },
       { name: "Python", icon: SiPython },
     ],
   },
   {
     category: "Databases",
     skills: [
-      { name: "PostgreSQL", icon: SiPostgresql },
       { name: "MongoDB", icon: SiMongodb },
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "MySQL", icon: SiMysql },
+      { name: "SQLite", icon: SiSqlite },
     ],
   },
   {
-    category: "Tools & Others",
+    category: "Tools & DevOps",
     skills: [
-      { name: "GitHub", icon: SiGithub },
+      { name: "Google Cloud", icon: SiGooglecloud },
+      { name: "GitHub Actions", icon: SiGithubactions },
+      { name: "Docker", icon: SiDocker },
       { name: "Git", icon: SiGit },
-      { name: "Vercel", icon: SiVercel },
+      { name: "GitHub", icon: SiGithub },
       { name: "VS Code", icon: DiVisualstudio },
       { name: "IntelliJ IDEA", icon: SiIntellijidea },
     ],

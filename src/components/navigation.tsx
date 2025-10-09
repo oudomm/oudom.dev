@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
+import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 
 export default function Navigation() {
   const navItems = [
@@ -30,7 +31,8 @@ export default function Navigation() {
             ))}
           </div>
 
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
+          <AnimatedThemeToggler />
         </div>
       </div>
     </nav>

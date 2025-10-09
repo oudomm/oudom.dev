@@ -17,7 +17,7 @@ export default function Hero() {
 
         <p className="text-muted-foreground mx-auto mb-10 max-w-2xl text-lg md:text-xl">
           Passionate about creating web applications with modern technologies.
-          Currently building projects and preparing to join the tech industry.
+          Currently building projects and preparing to join . tech industry.
         </p>
 
         <div className="flex flex-col justify-center gap-4 sm:flex-row">

@@ -16,30 +16,40 @@ export const projects: Project[] = [
   {
     id: "project-1",
     title: "Endora",
-    description: "Backend-as-a-Service development platform.",
+    description:
+      "School final project: Schema-based Backend-as-a-Service (BaaS) platform.",
     longDescription:
-      "The all-in-one Backend-as-a-Service platform with authentication, APIs, databases, and more. This project helps developers quickly set up backend infrastructure without building everything from scratch.",
-    technologies: ["Next.js", "Spring Boot", "MongoDB", "PostgreSQL"],
+      "Endora is a full-stack Backend-as-a-Service (BaaS) platform built as my final school project. It enables users to define data schemas through a form-based interface, similar to creating SQL tables, and automatically generates RESTful APIs from those schemas. The system stores schema definitions in MongoDB and supports connecting external PostgreSQL databases to instantly generate APIs. Endora aims to help frontend developers and students quickly create production-ready backends without manual API coding.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Spring Boot",
+      "MongoDB",
+      "PostgreSQL",
+      "Google Cloud",
+    ],
     githubUrl: "https://github.com/oudomm",
     liveUrl: "https://endora.space",
     imageUrl: {
-      light: "/projects/api-ngin-light.png",
-      dark: "/projects/api-ngin-dark.png",
+      light: "/images/projects/endora-light.png",
+      dark: "/images/projects/endora-dark.png",
     },
     type: "fullstack",
     teamSize: 8,
     myRole:
-      "Full-stack Developer - Built REST API endpoints, handled application deployment, and integrated frontend components with backend services",
+      "Full-stack Developer – Developed schema-based API generation logic, integrated external PostgreSQL connections, contributed to the frontend interface, and managed deployment.",
   },
   {
     id: "project-2",
     title: "Personal Portfolio Website",
-    description: "Modern portfolio website built with Next.js and TypeScript.",
+    description:
+      "Modern and responsive portfolio built with Next.js and TypeScript.",
     longDescription:
-      "A responsive portfolio website showcasing my projects and skills. Built from scratch to demonstrate my frontend development abilities and attention to modern web development practices.",
+      "A personal portfolio website designed and developed to showcase my projects, skills, and experiences. The site features a responsive layout, light and dark themes, and smooth animations. Built with modern tools and frameworks, it reflects my approach to creating clean, accessible, and performance-focused web interfaces.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/ui"],
-    githubUrl: "https://github.com/yourusername/portfolio", // You'll update this later
-    liveUrl: "#", // You'll update this when deployed
+    githubUrl: "https://github.com/oudomm/my-portfolio",
+    liveUrl: "https://oudom.dev",
     imageUrl: {
       light: "/projects/portfolio-light.png",
       dark: "/projects/portfolio-dark.png",
@@ -47,6 +57,6 @@ export const projects: Project[] = [
     type: "frontend",
     teamSize: 1,
     myRole:
-      "Solo Developer - Complete design and development of responsive portfolio website",
+      "Frontend Developer – Designed and developed the entire website, implemented responsive UI components, theme switching, and optimized overall performance.",
   },
 ];

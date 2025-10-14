@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ThemeToggle from "./theme-toggle";
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 
 export default function Navigation() {
@@ -31,8 +30,7 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* <ThemeToggle /> */}
-          <AnimatedThemeToggler />
+          <AnimatedThemeToggler className="cursor-pointer" />
         </div>
       </div>
     </nav>

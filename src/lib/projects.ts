@@ -51,8 +51,8 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/oudomm/my-portfolio",
     liveUrl: "https://oudom.dev",
     imageUrl: {
-      light: "/projects/portfolio-light.png",
-      dark: "/projects/portfolio-dark.png",
+      light: "/images/projects/portfolio-light.png",
+      dark: "/images/projects/portfolio-dark.png",
     },
     type: "frontend",
     teamSize: 1,

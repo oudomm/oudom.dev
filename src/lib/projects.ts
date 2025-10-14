@@ -15,13 +15,13 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "project-1",
-    title: "API-NGIN",
+    title: "Endora",
     description: "Backend-as-a-Service development platform.",
     longDescription:
       "The all-in-one Backend-as-a-Service platform with authentication, APIs, databases, and more. This project helps developers quickly set up backend infrastructure without building everything from scratch.",
     technologies: ["Next.js", "Spring Boot", "MongoDB", "PostgreSQL"],
     githubUrl: "https://github.com/oudomm",
-    liveUrl: "https://api-ngin.oudom.dev",
+    liveUrl: "https://endora.space",
     imageUrl: {
       light: "/projects/api-ngin-light.png",
       dark: "/projects/api-ngin-dark.png",

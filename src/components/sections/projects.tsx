@@ -13,8 +13,6 @@ import { Badge } from "@/components/ui/badge";
 import { Project, projects } from "@/lib/projects";
 import { ExternalLink, Github, Users } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
-import { useTheme } from "@/lib/theme-context";
 
 export default function Projects() {
   return (
@@ -39,37 +37,21 @@ export default function Projects() {
 }
 
 function ProjectCard({ project }: { project: Project }) {
-  const [imageError, setImageError] = useState(false);
-  const { theme } = useTheme();
-
-  const currentimage =
-    theme === "dark" ? project.imageUrl.dark : project.imageUrl.light;
-
   return (
     <Card className="overflow-hidden">
       <div className="bg-muted relative aspect-video overflow-hidden">
-        {!imageError ? (
-          <Image
-            src={currentimage}
-            alt={`${project.title} screenshot`}
-            fill
-            className="object-cover"
-            onError={() => setImageError(true)}
-          />
-        ) : (
-          // Fallback placeholder when image fails to load
-          <div className="from-primary/20 to-primary/5 absolute inset-0 flex items-center justify-center bg-gradient-to-br">
-            <div className="text-center">
-              <div className="bg-primary/20 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg">
-                <ExternalLink className="text-primary h-8 w-8" />
-              </div>
-              <p className="text-sm font-medium">{project.title}</p>
-              <p className="text-muted-foreground text-xs">
-                Add screenshot to public/{currentimage}
-              </p>
-            </div>
-          </div>
-        )}
+        <Image
+          src={project.imageUrl.light}
+          alt={`${project.title} screenshot`}
+          fill
+          className="block object-cover dark:hidden"
+        />
+        <Image
+          src={project.imageUrl.dark}
+          alt={`${project.title} screenshot`}
+          fill
+          className="hidden object-cover dark:block"
+        />
       </div>
 
       <CardHeader>

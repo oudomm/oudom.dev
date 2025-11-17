@@ -3,28 +3,20 @@ import {
   SiNextdotjs,
   SiTypescript,
   SiJavascript,
-  SiHtml5,
-  SiCss3,
   SiTailwindcss,
-  SiNodedotjs,
   SiSpringboot,
   SiMongodb,
   SiPostgresql,
   SiGit,
   SiGithub,
-  SiVercel,
   SiDocker,
   SiPython,
   SiGooglecloud,
-  SiGithubactions,
-  SiIntellijidea,
-  SiExpress,
   SiSqlite,
-  SiMysql,
-  SiFastapi,
+  SiLinux,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-import { DiVisualstudio } from "react-icons/di";
+import { TbApps } from "react-icons/tb";
 
 export interface Skill {
   name: string;
@@ -45,18 +37,13 @@ export const skillsData: SkillCategory[] = [
       { name: "TypeScript", icon: SiTypescript },
       { name: "JavaScript", icon: SiJavascript },
       { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "CSS3", icon: SiCss3 },
-      { name: "HTML5", icon: SiHtml5 },
     ],
   },
   {
     category: "Backend",
     skills: [
-      { name: "Express.js", icon: SiExpress },
-      { name: "Node.js", icon: SiNodedotjs },
       { name: "Spring Boot", icon: SiSpringboot },
       { name: "Java", icon: FaJava },
-      { name: "FastAPI", icon: SiFastapi },
       { name: "Python", icon: SiPython },
     ],
   },
@@ -65,7 +52,6 @@ export const skillsData: SkillCategory[] = [
     skills: [
       { name: "MongoDB", icon: SiMongodb },
       { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "MySQL", icon: SiMysql },
       { name: "SQLite", icon: SiSqlite },
     ],
   },
@@ -73,18 +59,16 @@ export const skillsData: SkillCategory[] = [
     category: "Tools & DevOps",
     skills: [
       { name: "Google Cloud", icon: SiGooglecloud },
-      { name: "GitHub Actions", icon: SiGithubactions },
       { name: "Docker", icon: SiDocker },
       { name: "Git", icon: SiGit },
       { name: "GitHub", icon: SiGithub },
-      { name: "VS Code", icon: DiVisualstudio },
-      { name: "IntelliJ IDEA", icon: SiIntellijidea },
     ],
   },
 ];
 
 export const learningSkills: Skill[] = [
+  { name: "Microservices", icon: TbApps },
   { name: "Google Cloud", icon: SiGooglecloud },
   { name: "Docker", icon: SiDocker },
-  { name: "GitHub Actions", icon: SiGithubactions },
+  { name: "Linux", icon: SiLinux },
 ];

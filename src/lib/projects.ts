@@ -26,6 +26,7 @@ export const projects: Project[] = [
       "Spring Boot",
       "MongoDB",
       "PostgreSQL",
+      "Docker",
       "Google Cloud",
     ],
     githubUrl: "https://github.com/oudomm",

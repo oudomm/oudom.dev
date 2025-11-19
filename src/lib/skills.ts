@@ -15,7 +15,7 @@ export const skillsData: SkillCategory[] = [
   },
   {
     category: "Backend",
-    skills: [{ name: "Spring Boot", url: "/images/skills/spring.svg" }],
+    skills: [{ name: "Spring Framework", url: "/images/skills/spring.svg" }],
   },
   {
     category: "Databases",

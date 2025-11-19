@@ -1,26 +1,6 @@
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiJavascript,
-  SiTailwindcss,
-  SiSpringboot,
-  SiMongodb,
-  SiPostgresql,
-  SiGit,
-  SiGithub,
-  SiDocker,
-  SiPython,
-  SiGooglecloud,
-  SiSqlite,
-  SiLinux,
-} from "react-icons/si";
-import { FaJava } from "react-icons/fa";
-import { TbApps } from "react-icons/tb";
-
 export interface Skill {
   name: string;
-  icon: React.ComponentType<{ className?: string }>;
+  url: string;
 }
 
 export interface SkillCategory {
@@ -31,44 +11,23 @@ export interface SkillCategory {
 export const skillsData: SkillCategory[] = [
   {
     category: "Frontend",
-    skills: [
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "React", icon: SiReact },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-    ],
+    skills: [{ name: "Next.js", url: "/images/skills/nextjs.svg" }],
   },
   {
     category: "Backend",
-    skills: [
-      { name: "Spring Boot", icon: SiSpringboot },
-      { name: "Java", icon: FaJava },
-      { name: "Python", icon: SiPython },
-    ],
+    skills: [{ name: "Spring Boot", url: "/images/skills/spring.svg" }],
   },
   {
     category: "Databases",
-    skills: [
-      { name: "MongoDB", icon: SiMongodb },
-      { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "SQLite", icon: SiSqlite },
-    ],
+    skills: [{ name: "PostgreSQL", url: "/images/skills/postgresql.svg" }],
   },
   {
     category: "Tools & DevOps",
-    skills: [
-      { name: "Google Cloud", icon: SiGooglecloud },
-      { name: "Docker", icon: SiDocker },
-      { name: "Git", icon: SiGit },
-      { name: "GitHub", icon: SiGithub },
-    ],
+    skills: [{ name: "Git", url: "/images/skills/git.svg" }],
   },
 ];
 
 export const learningSkills: Skill[] = [
-  { name: "Microservices", icon: TbApps },
-  { name: "Google Cloud", icon: SiGooglecloud },
-  { name: "Docker", icon: SiDocker },
-  { name: "Linux", icon: SiLinux },
+  { name: "Docker", url: "/images/skills/docker.svg" },
+  { name: "Linux", url: "/images/skills/linux.svg" },
 ];

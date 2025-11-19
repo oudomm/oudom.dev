@@ -26,7 +26,9 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div
+          className={`grid gap-8 ${projects.length === 1 ? "mx-auto max-w-2xl" : "md:grid-cols-2"}`}
+        >
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

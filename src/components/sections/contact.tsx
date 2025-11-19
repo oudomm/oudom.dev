@@ -147,11 +147,11 @@ export default function Contact() {
                   Send Email
                 </a>
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              {/* <Button variant="outline" size="lg" asChild>
                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                   Download Resume
                 </a>
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

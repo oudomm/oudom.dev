@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { skillsData, learningSkills } from "@/lib/skills";
+import Image from "next/image";
 
 export default function Skills() {
   return (
@@ -25,10 +26,14 @@ export default function Skills() {
               <CardContent>
                 <div className="space-y-3">
                   {category.skills.map((skill) => {
-                    const IconComponent = skill.icon;
                     return (
                       <div key={skill.name} className="flex items-center gap-3">
-                        <IconComponent className="text-primary h-5 w-5" />
+                        <Image
+                          src={skill.url}
+                          alt={`${skill.name} logo`}
+                          width={32}
+                          height={32}
+                        />
                         <span className="text-sm font-medium">
                           {skill.name}
                         </span>
@@ -47,14 +52,18 @@ export default function Skills() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             {learningSkills.map((skill) => {
-              const IconComponent = skill.icon;
               return (
                 <Badge
                   key={skill.name}
                   variant="outline"
                   className="flex items-center gap-2 px-3 py-2"
                 >
-                  <IconComponent className="h-4 w-4" />
+                  <Image
+                    src={skill.url}
+                    alt={`${skill.name} logo`}
+                    width={30}
+                    height={30}
+                  />
                   {skill.name}
                 </Badge>
               );

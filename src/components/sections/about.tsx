@@ -18,7 +18,7 @@ export default function About() {
           <div className="md:col-span-1">
             <div className="relative aspect-square overflow-hidden rounded-lg">
               <Image
-                src="/images/profile1.JPG"
+                src="/images/profile.jpg"
                 alt="Oudom - Profile Photo"
                 fill
                 className="object-cover"

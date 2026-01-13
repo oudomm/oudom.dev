@@ -79,7 +79,7 @@ export default function About() {
               <div>
                 <div className="text-primary mb-2 text-2xl font-bold">15+</div>
                 <p className="text-muted-foreground text-sm">
-                  Technologies Learned
+                  Technologies Used
                 </p>
               </div>
               <div>

@@ -16,8 +16,8 @@ export default function Hero() {
         </h2>
 
         <p className="text-muted-foreground mx-auto mb-10 max-w-2xl text-lg md:text-xl">
-          Passionate about creating web applications with modern technologies.
-          Currently building projects and preparing to join tech industry.
+          I’m a Full-Stack Developer focused on building scalable backend
+          systems and clean, user-friendly web applications.
         </p>
 
         <div className="flex flex-col justify-center gap-4 sm:flex-row">

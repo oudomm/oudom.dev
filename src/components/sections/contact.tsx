@@ -130,7 +130,7 @@ export default function Contact() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
+        <div className="spring-hero border-border/60 card-pop bg-card/70 rounded-lg border p-8 text-center">
           <div className="bg-primary/10 rounded-lg p-8">
             <h3 className="mb-4 text-xl font-semibold">
               Ready to Make an Impact

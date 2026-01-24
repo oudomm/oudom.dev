@@ -40,8 +40,8 @@ export default function Projects() {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="overflow-hidden">
-      <div className="bg-muted relative aspect-video overflow-hidden">
+    <Card className="card-pop border-primary overflow-hidden border-t-4">
+      <div className="bg-secondary/30 relative aspect-video overflow-hidden">
         <Image
           src={project.imageUrl.light}
           alt={`${project.title} screenshot`}

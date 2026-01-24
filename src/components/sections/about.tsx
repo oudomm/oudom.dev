@@ -64,7 +64,7 @@ export default function About() {
         </div>
 
         {/* Quick facts */}
-        <Card>
+        <Card className="card-pop border-border/60 border">
           <CardContent className="pt-6">
             <h3 className="mb-4 text-center text-xl font-semibold">
               Quick Facts

@@ -16,10 +16,12 @@ import Image from "next/image";
 
 export default function Projects() {
   return (
-    <section id="projects" className="px-4 py-20">
-      <div className="mx-auto max-w-6xl">
+    <section id="projects" className="section-alt section-pattern px-4 py-20">
+      <div className="relative mx-auto max-w-6xl">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">My Projects</h2>
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+            My <span className="text-gradient">Projects</span>
+          </h2>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             Here are some projects I&apos;ve worked on during my studies,
             showcasing my skills in web development.
@@ -40,7 +42,7 @@ export default function Projects() {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="card-pop border-primary overflow-hidden border-t-4">
+    <Card className="card-pop card-hover border-primary overflow-hidden border-t-4">
       <div className="bg-secondary/30 relative aspect-video overflow-hidden">
         <Image
           src={project.imageUrl.light}

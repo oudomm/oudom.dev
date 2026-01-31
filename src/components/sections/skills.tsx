@@ -5,11 +5,12 @@ import Image from "next/image";
 
 export default function Skills() {
   return (
-    <section id="skills" className="px-4 py-20">
-      <div className="mx-auto max-w-6xl">
+    <section id="skills" className="blob-decoration px-4 py-20">
+      <div className="relative mx-auto max-w-6xl">
+        <div className="section-divider mx-auto mb-16 max-w-md" />
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-            Skills & Technologies
+            Skills & <span className="text-gradient">Technologies</span>
           </h2>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             Technologies and tools I&apos;ve learned and used in my projects and
@@ -17,11 +18,11 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="stagger-children grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {skillsData.map((category) => (
             <Card
               key={category.category}
-              className="card-pop border-border/60 border"
+              className="card-pop card-hover border-border/60 border"
             >
               <CardHeader>
                 <CardTitle className="from-primary inline-block bg-gradient-to-r via-emerald-400 to-amber-300 bg-clip-text text-xl text-transparent">

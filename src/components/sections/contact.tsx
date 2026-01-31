@@ -5,11 +5,12 @@ import { Mail, Github, Linkedin, Send, MapPin, Calendar } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="px-4 py-20">
-      <div className="mx-auto max-w-4xl">
+    <section id="contact" className="blob-decoration px-4 py-20">
+      <div className="relative mx-auto max-w-4xl">
+        <div className="section-divider mx-auto mb-16 max-w-md" />
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-            Let&apos;s Connect
+            Let&apos;s <span className="text-gradient">Connect</span>
           </h2>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             I&apos;m actively looking for opportunities to start my career in
@@ -20,10 +21,10 @@ export default function Contact() {
 
         <div className="mb-12 grid gap-8 md:grid-cols-2">
           {/* Contact Information */}
-          <Card>
+          <Card className="card-pop card-hover">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Mail className="h-5 w-5" />
+                <Mail className="text-primary h-5 w-5" />
                 Get In Touch
               </CardTitle>
             </CardHeader>
@@ -84,10 +85,10 @@ export default function Contact() {
           </Card>
 
           {/* Availability & Preferences */}
-          <Card>
+          <Card className="card-pop card-hover">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Calendar className="h-5 w-5" />
+                <Calendar className="text-primary h-5 w-5" />
                 Availability
               </CardTitle>
             </CardHeader>

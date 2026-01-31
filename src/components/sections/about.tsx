@@ -4,26 +4,32 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="px-4 py-20">
+    <section id="about" className="section-alt px-4 py-20">
       <div className="mx-auto max-w-4xl">
+        <div className="section-divider mx-auto mb-16 max-w-md" />
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">About Me</h2>
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+            About <span className="text-gradient">Me</span>
+          </h2>
           <p className="text-muted-foreground text-lg">
             Get to know me beyond the code
           </p>
         </div>
 
         <div className="mb-12 grid gap-8 md:grid-cols-3">
-          {/* Photo placeholder */}
+          {/* Photo with gradient ring */}
           <div className="md:col-span-1">
-            <div className="relative aspect-square overflow-hidden rounded-lg">
-              <Image
-                src="/images/profile.jpg"
-                alt="Oudom - Profile Photo"
-                fill
-                className="object-cover"
-                priority
-              />
+            <div className="gradient-ring mx-auto w-fit">
+              <div className="relative aspect-square w-full overflow-hidden rounded-xl md:w-auto">
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Oudom - Profile Photo"
+                  width={300}
+                  height={300}
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
 
@@ -64,26 +70,30 @@ export default function About() {
         </div>
 
         {/* Quick facts */}
-        <Card className="card-pop border-border/60 border">
+        <Card className="card-pop card-hover border-border/60 border">
           <CardContent className="pt-6">
-            <h3 className="mb-4 text-center text-xl font-semibold">
+            <h3 className="mb-6 text-center text-xl font-semibold">
               Quick Facts
             </h3>
-            <div className="grid gap-6 text-center md:grid-cols-3">
-              <div>
-                <div className="text-primary mb-2 text-2xl font-bold">5+</div>
+            <div className="stagger-children grid gap-6 text-center md:grid-cols-3">
+              <div className="group">
+                <div className="stat-gradient mb-2 text-4xl font-bold transition-transform group-hover:scale-110">
+                  5+
+                </div>
                 <p className="text-muted-foreground text-sm">
                   Projects Completed
                 </p>
               </div>
-              <div>
-                <div className="text-primary mb-2 text-2xl font-bold">15+</div>
+              <div className="group">
+                <div className="stat-gradient mb-2 text-4xl font-bold transition-transform group-hover:scale-110">
+                  15+
+                </div>
                 <p className="text-muted-foreground text-sm">
                   Technologies Used
                 </p>
               </div>
-              <div>
-                <div className="text-primary mb-2 text-2xl font-bold">
+              <div className="group">
+                <div className="stat-gradient mb-2 text-4xl font-bold transition-transform group-hover:scale-110">
                   Ready
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -96,24 +106,26 @@ export default function About() {
 
         {/* Values */}
         <div className="mt-12 text-center">
-          <h3 className="mb-6 text-xl font-semibold">What I Value</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Badge variant="secondary" className="px-4 py-2">
+          <h3 className="mb-6 text-xl font-semibold">
+            What I <span className="text-gradient">Value</span>
+          </h3>
+          <div className="stagger-children flex flex-wrap justify-center gap-3">
+            <Badge variant="secondary" className="px-4 py-2 transition-transform hover:scale-105">
               Real-World Impact
             </Badge>
-            <Badge variant="secondary" className="px-4 py-2">
+            <Badge variant="secondary" className="px-4 py-2 transition-transform hover:scale-105">
               Problem Solving
             </Badge>
-            <Badge variant="secondary" className="px-4 py-2">
+            <Badge variant="secondary" className="px-4 py-2 transition-transform hover:scale-105">
               Continuous Learning
             </Badge>
-            <Badge variant="secondary" className="px-4 py-2">
+            <Badge variant="secondary" className="px-4 py-2 transition-transform hover:scale-105">
               Clean Code
             </Badge>
-            <Badge variant="secondary" className="px-4 py-2">
+            <Badge variant="secondary" className="px-4 py-2 transition-transform hover:scale-105">
               User-Centered Design
             </Badge>
-            <Badge variant="secondary" className="px-4 py-2">
+            <Badge variant="secondary" className="px-4 py-2 transition-transform hover:scale-105">
               Team Collaboration
             </Badge>
           </div>

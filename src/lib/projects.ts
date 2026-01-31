@@ -40,4 +40,29 @@ export const projects: Project[] = [
     myRole:
       "Full-stack Developer – Built AI scraper chatbot, integrated PostgreSQL, developed frontend features, and managed deployment.",
   },
+  {
+    id: "project-2",
+    title: "LineupLab",
+    description: "Football lineup builder and formation creator.",
+    longDescription:
+      "A free online tool for creating professional football lineups. Features drag-and-drop player positioning, customizable formations (4-3-3, 4-4-2, 3-5-2, etc.), player photo uploads, bench management, and high-quality image export. Built with modern glass morphism UI and full light/dark theme support.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "dnd-kit",
+    ],
+    githubUrl: "https://github.com/oudomm/LineupLab",
+    liveUrl: "https://lineuplab.oudom.dev",
+    imageUrl: {
+      light: "/images/projects/lineuplab-light.png",
+      dark: "/images/projects/lineuplab-dark.png",
+    },
+    type: "frontend",
+    teamSize: 1,
+    myRole:
+      "Solo Developer – Designed and built the entire application including drag-and-drop system, formation presets, image export, and responsive UI.",
+  },
 ];

@@ -6,7 +6,7 @@ export default function Navigation() {
   return (
     <nav className="border-border/60 bg-background/80 fixed top-0 z-50 w-full border-b backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-14 items-center justify-between">
+        <div className="flex h-14 items-center justify-between sm:grid sm:grid-cols-3">
           <Link
             href="/"
             className="text-foreground text-lg font-bold tracking-tight"
@@ -14,7 +14,19 @@ export default function Navigation() {
             oudom<span className="text-primary">.dev</span>
           </Link>
 
-          <div className="flex items-center gap-1">
+          <nav className="hidden items-center justify-center gap-1 sm:flex">
+            {["About", "Skills", "Projects", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-muted-foreground hover:text-foreground rounded-full px-3 py-1.5 text-sm transition-colors hover:bg-secondary"
+              >
+                {item}
+              </a>
+            ))}
+          </nav>
+
+          <div className="flex items-center justify-end gap-1">
             <a
               href="https://github.com/oudomm"
               target="_blank"

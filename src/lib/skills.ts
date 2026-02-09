@@ -40,4 +40,9 @@ export const skillsData: SkillCategory[] = [
 
 export const learningSkills: Skill[] = [
   { name: "Spring Microservices", url: "/images/skills/spring.svg" },
+  {name: "Microfrontends", url: "/images/skills/microfrontend.webp"},
+  {name: "Linux", url: "/images/skills/linux.svg"},
+  {name: "Docker", url: "/images/skills/docker.svg"},
+  {name: "Networking", url: "/images/skills/networking.png"},
+
 ];

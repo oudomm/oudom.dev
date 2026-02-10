@@ -8,16 +8,21 @@ import { Marquee } from "@/components/ui/marquee";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  "Spring Boot",
-  "Microservices",
-  "Backend Systems",
-  "Java",
-  "PostgreSQL",
-  "Docker",
-  "Kubernetes",
-  "REST APIs",
+  "Microfrontends",
   "Next.js",
+  "React",
   "TypeScript",
+  "JavaScript",
+  "TailwindCSS",
+  "Microservices",
+  "Spring Boot",
+  "Java",
+  "Python",
+  "PostgreSQL",
+  "MongoDB",
+  "Docker",
+  "Linux",
+  "Google Cloud"
 ];
 
 export default function Hero() {

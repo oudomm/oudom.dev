@@ -1,14 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Syne, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { themeScript } from "@/lib/theme-script";
 
-const inter = Inter({ subsets: ["latin"] });
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bebas",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Oudom - Full-Stack Developer",
+  title: "Oudom — Full-Stack Developer",
   description:
-    "Full-stack developer passionate about solving real-world problems with modern web technologies. Ready to make an impact.",
+    "Full-stack developer building scalable backend systems and clean web applications that solve real problems.",
 };
 
 export default function RootLayout({
@@ -21,7 +33,9 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${syne.variable} ${bebasNeue.variable} font-sans antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

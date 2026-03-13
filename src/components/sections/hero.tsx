@@ -1,107 +1,118 @@
-"use client";
-
-import { ShimmerButton } from "@/components/ui/shimmer-button";
-import { Button } from "@/components/ui/button";
-import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { Marquee } from "@/components/ui/marquee";
-import { cn } from "@/lib/utils";
 
-const skills = [
-  "Microfrontends",
+const techStack = [
   "Next.js",
-  "React",
-  "TypeScript",
-  "JavaScript",
-  "TailwindCSS",
-  "Microservices",
   "Spring Boot",
-  "Java",
-  "Python",
+  "TypeScript",
+  "React",
   "PostgreSQL",
   "MongoDB",
   "Docker",
-  "Linux",
-  "Google Cloud"
+  "Google Cloud",
 ];
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="hero-gradient relative flex min-h-screen items-center justify-center overflow-hidden px-4"
+      className="relative flex min-h-screen flex-col justify-end px-6 pb-16 pt-24 lg:px-12"
     >
-      {/* Animated Grid Pattern Background */}
-      <AnimatedGridPattern
-        numSquares={30}
-        maxOpacity={0.15}
-        duration={3}
-        repeatDelay={1}
-        className={cn(
-          "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]",
-          "fill-primary/30 stroke-primary/30"
-        )}
-      />
-
-      <div className="relative z-10 mx-auto max-w-4xl text-center">
+      {/* Name — the hero IS the typography */}
+      <div className="mb-6 overflow-hidden">
+        <BlurFade delay={0.05} inView>
+          <div
+            className="font-display text-foreground leading-[0.85] select-none"
+            style={{ fontSize: "clamp(4.5rem, 19vw, 14rem)" }}
+          >
+            OUDOM
+          </div>
+        </BlurFade>
         <BlurFade delay={0.1} inView>
-          <h1 className="mb-6 text-4xl font-bold md:text-6xl">
-            Hi, I&apos;m <span className="text-gradient">Oudom</span>
-          </h1>
+          <div
+            className="font-display text-foreground/15 leading-[0.85] select-none"
+            style={{ fontSize: "clamp(4.5rem, 19vw, 14rem)" }}
+          >
+            PHOEM
+          </div>
         </BlurFade>
+      </div>
 
+      {/* Divider */}
+      <div className="rule mb-8" />
+
+      {/* Info row */}
+      <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-3">
         <BlurFade delay={0.2} inView>
-          <h2 className="text-foreground/80 mb-6 text-xl md:text-2xl">
-            Full-Stack Developer
-          </h2>
+          <div>
+            <p className="section-label mb-2">Role</p>
+            <p
+              className="font-display text-foreground"
+              style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)" }}
+            >
+              FULL-STACK DEVELOPER
+            </p>
+          </div>
         </BlurFade>
 
-        <BlurFade delay={0.3} inView>
-          <p className="text-muted-foreground mx-auto mb-10 max-w-2xl text-lg md:text-xl">
+        <BlurFade delay={0.25} inView>
+          <div>
+            <p className="section-label mb-2">Based In</p>
+            <p
+              className="font-display text-foreground/50"
+              style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)" }}
+            >
+              PHNOM PENH, CAMBODIA
+            </p>
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={0.28} inView>
+          <div>
+            <p className="section-label mb-2">Status</p>
+            <p className="flex items-center gap-2 text-sm font-medium text-foreground/70">
+              <span className="avail-dot" />
+              Open to opportunities
+            </p>
+          </div>
+        </BlurFade>
+      </div>
+
+      {/* Description + CTA */}
+      <div className="mb-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+        <BlurFade delay={0.32} inView>
+          <p className="max-w-sm text-base leading-relaxed text-muted-foreground">
             I build scalable backend systems with Spring Boot and microservices,
             while delivering clean, user-friendly web applications.
           </p>
         </BlurFade>
 
-        <BlurFade delay={0.4} inView>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row sm:items-center">
-            <ShimmerButton
-              shimmerColor="oklch(0.70 0.18 180)"
-              background="oklch(0.65 0.24 350)"
-              className="h-11 px-8 text-sm font-semibold"
-              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+        <BlurFade delay={0.38} inView>
+          <div className="flex flex-wrap items-center gap-6">
+            <a href="#projects" className="cta-link">
+              <span className="cta-bar" />
+              View Work
+            </a>
+            <a
+              href="#contact"
+              className="text-xs font-semibold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
             >
-              View My Work
-            </ShimmerButton>
-
-            <Button
-              variant="outline"
-              size="lg"
-              asChild
-              className="card-pop card-hover bg-card/60 h-11"
-            >
-              <a href="#contact">Get In Touch</a>
-            </Button>
-          </div>
-        </BlurFade>
-
-        <BlurFade delay={0.5} inView>
-          <div className="relative mt-12 overflow-hidden py-4">
-            <div className="from-background to-background/0 pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r" />
-            <div className="from-background/0 to-background pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-r" />
-            <Marquee pauseOnHover className="[--duration:25s]">
-              {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="bg-secondary/80 text-secondary-foreground border-primary/20 rounded-full border px-4 py-2 text-sm font-medium transition-all hover:scale-105 hover:border-primary/40"
-                >
-                  {skill}
-                </span>
-              ))}
-            </Marquee>
+              Contact →
+            </a>
           </div>
         </BlurFade>
       </div>
+
+      {/* Tech stack */}
+      <BlurFade delay={0.44} inView>
+        <div className="rule mb-4" />
+        <div className="flex flex-wrap gap-2">
+          {techStack.map((tech) => (
+            <span key={tech} className="tech-tag">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </BlurFade>
     </section>
   );
 }

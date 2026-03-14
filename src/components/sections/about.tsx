@@ -2,12 +2,11 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import Image from "next/image";
 
 const values = [
-  "Real-World Impact",
-  "Problem Solving",
-  "Continuous Learning",
-  "Clean Code",
-  "User-Centered Design",
-  "Team Collaboration",
+  "Understanding over memorizing",
+  "Reading code before writing it",
+  "Backend done properly",
+  "Ship it, then improve it",
+  "Honest about what I don't know",
 ];
 
 export default function About() {
@@ -57,24 +56,21 @@ export default function About() {
             <div>
               <p className="section-label mb-3">My Journey</p>
               <p className="leading-relaxed text-muted-foreground">
-                I&apos;m a passionate web developer driven by the desire to
-                solve real-world problems through technology. I believe that
-                even small changes in code can create big impacts on
-                people&apos;s daily lives, and that&apos;s what motivates me
-                to write better software every day.
+                Full-stack developer with a focus on backend architecture.
+                I care about understanding systems properly — not just making
+                things work, but knowing why they work.
               </p>
             </div>
           </BlurFade>
 
           <BlurFade delay={0.25} inView>
             <div>
-              <p className="section-label mb-3">What Drives Me</p>
+              <p className="section-label mb-3">What I&apos;m Learning</p>
               <p className="leading-relaxed text-muted-foreground">
-                I&apos;m fascinated by how technology can transform the way
-                people work, learn, and connect. Whether it&apos;s building a
-                backend service that powers thousands of users or creating an
-                interface that makes someone&apos;s job easier, I find purpose
-                in creating solutions that matter.
+                Currently studying microservices and microfrontends in depth —
+                event-driven design, reactive APIs, observability, and
+                multi-zone Next.js for frontend composition. The kind of things
+                that matter when systems actually need to scale.
               </p>
             </div>
           </BlurFade>
@@ -83,10 +79,7 @@ export default function About() {
             <div>
               <p className="section-label mb-3">Beyond Coding</p>
               <p className="leading-relaxed text-muted-foreground">
-                When I&apos;m not coding, you&apos;ll find me watching movies
-                or listening to music. These creative outlets help me think
-                differently about problems and often inspire new approaches to
-                the challenges I face in development.
+                Outside of work, I watch a lot of movies and series.
               </p>
             </div>
           </BlurFade>
@@ -100,7 +93,7 @@ export default function About() {
           {[
             { value: "5+", label: "Projects Completed" },
             { value: "15+", label: "Technologies Used" },
-            { value: "∞", label: "Problems to Solve" },
+            { value: "Now", label: "Available to Work" },
           ].map(({ value, label }) => (
             <div key={label} className="text-center md:text-left">
               <div

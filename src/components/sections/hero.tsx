@@ -81,8 +81,8 @@ export default function Hero() {
       <div className="mb-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <BlurFade delay={0.32} inView>
           <p className="max-w-sm text-base leading-relaxed text-muted-foreground">
-            I build scalable backend systems with Spring Boot and microservices,
-            while delivering clean, user-friendly web applications.
+            Full-stack developer focused on backend systems. Building with Spring
+          Boot, Next.js, and whatever the problem needs.
           </p>
         </BlurFade>
 

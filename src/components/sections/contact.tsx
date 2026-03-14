@@ -51,7 +51,7 @@ export default function Contact() {
       <BlurFade delay={0.15} inView>
         <div className="mb-16">
           <p className="section-label mb-6">
-            I&apos;m actively looking for opportunities — let&apos;s talk.
+            I&apos;m looking for my first role. Junior, backend-leaning, open to full-stack.
           </p>
           <a href="mailto:oudomphoem@gmail.com" className="contact-email">
             oudomphoem@gmail.com
@@ -97,7 +97,7 @@ export default function Contact() {
         <div className="mt-16 flex flex-wrap items-center gap-3">
           <span className="avail-dot" />
           <p className="text-sm text-muted-foreground">
-            Available for full-time, remote, on-site, and hybrid roles.
+            Open to full-time roles — remote, on-site, or hybrid.
           </p>
         </div>
       </BlurFade>

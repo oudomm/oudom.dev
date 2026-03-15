@@ -21,17 +21,41 @@ export default function Skills() {
 
       <div className="rule mb-0" />
 
-      {/* Skill rows — each category is a horizontal row */}
+      <BlurFade delay={0.08} inView>
+        <div className="grid gap-6 border-b border-border py-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(16rem,0.8fr)]">
+          <p className="max-w-2xl leading-relaxed text-muted-foreground">
+            I gravitate toward tools that make systems easier to reason about:
+            strong backend foundations, a frontend that stays clean under
+            pressure, and infrastructure I can actually explain.
+          </p>
+          <div className="border border-border bg-muted/20 p-5">
+            <p className="section-label mb-3">Working Bias</p>
+            <p className="text-sm leading-relaxed text-foreground/70">
+              Build the boring parts well. Make the sharp edges visible. Keep
+              complexity earned.
+            </p>
+          </div>
+        </div>
+      </BlurFade>
+
       <div>
         {skillsData.map((cat, i) => (
-          <BlurFade key={cat.category} delay={0.1 + i * 0.08} inView>
+          <BlurFade key={cat.category} delay={0.14 + i * 0.08} inView>
             <div className="skill-row">
-              <p className="section-label">{cat.category}</p>
+              <div className="space-y-2">
+                <p className="section-label">{cat.category}</p>
+                <p className="text-xs uppercase tracking-[0.18em] text-foreground/20">
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+              </div>
               <div className="flex flex-wrap items-center gap-4">
                 {cat.skills.map((skill) => {
                   const isDarkLogo = ["Next.js", "GitHub"].includes(skill.name);
                   return (
-                    <div key={skill.name} className="flex items-center gap-2 group">
+                    <div
+                      key={skill.name}
+                      className="group flex items-center gap-2 border border-transparent pr-3 transition-colors hover:border-border"
+                    >
                       <div
                         className={`flex h-5 w-5 items-center justify-center flex-shrink-0 ${
                           isDarkLogo ? "dark:bg-white/90 dark:rounded-sm dark:p-0.5" : ""
@@ -58,13 +82,16 @@ export default function Skills() {
 
         {/* Currently learning row */}
         <BlurFade delay={0.5} inView>
-          <div className="skill-row">
-            <p className="section-label">
-              Learning Now
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
-              {learningSkills.map((skill) => (
-                <div key={skill.name} className="flex items-center gap-2 group">
+            <div className="skill-row">
+              <div className="space-y-2">
+                <p className="section-label">Learning Now</p>
+                <p className="text-xs uppercase tracking-[0.18em] text-foreground/20">
+                  05
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center gap-4">
+                {learningSkills.map((skill) => (
+                  <div key={skill.name} className="flex items-center gap-2 group">
                   <div className="flex h-5 w-5 items-center justify-center flex-shrink-0">
                     <Image
                       src={skill.url}
@@ -86,13 +113,13 @@ export default function Skills() {
 
       {/* Languages note */}
       <BlurFade delay={0.6} inView>
-        <div className="mt-16 flex flex-wrap gap-x-8 gap-y-2">
+        <div className="mt-16 grid gap-6 border-t border-border pt-8 md:grid-cols-3">
           {[
             ["Languages", "TypeScript · JavaScript · Java · Python"],
             ["Paradigms", "REST · Microservices · Microfrontends"],
             ["Environment", "Linux · Docker · Google Cloud"],
           ].map(([label, items]) => (
-            <div key={label}>
+            <div key={label} className="border-l border-border pl-4">
               <p className="section-label mb-1">{label}</p>
               <p className="text-sm text-foreground/60">{items}</p>
             </div>

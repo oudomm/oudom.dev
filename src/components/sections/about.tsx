@@ -28,12 +28,80 @@ export default function About() {
 
       <div className="rule mb-16" />
 
-      {/* Main content: photo + bio */}
-      <div className="mb-20 grid gap-12 md:grid-cols-3 lg:gap-20">
-        {/* Photo */}
-        <BlurFade delay={0.15} inView>
-          <div className="md:col-span-1">
-            <div className="relative overflow-hidden border border-border aspect-square">
+      <div className="mb-20 grid gap-12 xl:grid-cols-[minmax(0,1.15fr)_minmax(18rem,24rem)] xl:items-start">
+        <div className="space-y-10">
+          <BlurFade delay={0.15} inView>
+            <div className="max-w-3xl">
+              <p className="section-label mb-3">My Journey</p>
+              <p
+                className="font-display text-foreground leading-[0.95]"
+                style={{ fontSize: "clamp(2.2rem, 5vw, 4.2rem)" }}
+              >
+                I like the part of software where the system starts making sense.
+              </p>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={0.2} inView>
+            <div className="grid gap-8 border-y border-border py-8 lg:grid-cols-[1.2fr_0.8fr]">
+              <div className="space-y-6">
+                <p className="leading-relaxed text-muted-foreground">
+                  Full-stack developer with a backend-first mindset. I care
+                  about understanding systems properly, not just making things
+                  work, but knowing why they work and where they will break.
+                </p>
+                <p className="leading-relaxed text-muted-foreground">
+                  Right now I&apos;m going deeper into microservices and
+                  microfrontends: event-driven design, reactive APIs,
+                  observability, and multi-zone Next.js composition. The kind
+                  of stuff that matters when software grows past the demo stage.
+                </p>
+              </div>
+
+              <div className="border border-border bg-muted/20 p-5">
+                <p className="section-label mb-4">Current Focus</p>
+                <div className="space-y-3">
+                  {[
+                    "Backend architecture that scales beyond prototypes",
+                    "Frontend systems that stay clean as teams grow",
+                    "Shipping work that feels considered, not overloaded",
+                  ].map((item, index) => (
+                    <div key={item} className="flex gap-3">
+                      <span className="section-label text-primary/70">
+                        0{index + 1}
+                      </span>
+                      <p className="text-sm leading-relaxed text-foreground/70">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </BlurFade>
+
+          <BlurFade delay={0.25} inView>
+            <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_14rem] md:items-end">
+              <div>
+                <p className="section-label mb-3">Beyond Coding</p>
+                <p className="leading-relaxed text-muted-foreground">
+                  Outside of work, I watch a lot of movies and series. I like
+                  work with atmosphere and pacing, which probably explains why I
+                  care so much about how products feel, not just what they do.
+                </p>
+              </div>
+              <p className="font-display text-right text-foreground/15 leading-none">
+                SLOW
+                <br />
+                BURN
+              </p>
+            </div>
+          </BlurFade>
+        </div>
+
+        <BlurFade delay={0.18} inView>
+          <div className="space-y-4 xl:sticky xl:top-28">
+            <div className="relative aspect-[4/5] overflow-hidden border border-border bg-muted/20">
               <Image
                 src="/images/profile.jpg"
                 alt="Oudom"
@@ -41,55 +109,26 @@ export default function About() {
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 priority
               />
-              {/* Lime corner accent */}
               <div
-                className="absolute bottom-0 left-0 w-8 h-8"
+                className="absolute bottom-0 left-0 h-10 w-10"
                 style={{ background: "var(--primary)" }}
               />
             </div>
+            <div className="border border-border p-5">
+              <p className="section-label mb-3">Short Version</p>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Backend-leaning full-stack developer from Phnom Penh. Still
+                early, but serious about foundations.
+              </p>
+            </div>
           </div>
         </BlurFade>
-
-        {/* Bio text */}
-        <div className="space-y-10 md:col-span-2">
-          <BlurFade delay={0.2} inView>
-            <div>
-              <p className="section-label mb-3">My Journey</p>
-              <p className="leading-relaxed text-muted-foreground">
-                Full-stack developer with a focus on backend architecture.
-                I care about understanding systems properly — not just making
-                things work, but knowing why they work.
-              </p>
-            </div>
-          </BlurFade>
-
-          <BlurFade delay={0.25} inView>
-            <div>
-              <p className="section-label mb-3">What I&apos;m Learning</p>
-              <p className="leading-relaxed text-muted-foreground">
-                Currently studying microservices and microfrontends in depth —
-                event-driven design, reactive APIs, observability, and
-                multi-zone Next.js for frontend composition. The kind of things
-                that matter when systems actually need to scale.
-              </p>
-            </div>
-          </BlurFade>
-
-          <BlurFade delay={0.3} inView>
-            <div>
-              <p className="section-label mb-3">Beyond Coding</p>
-              <p className="leading-relaxed text-muted-foreground">
-                Outside of work, I watch a lot of movies and series.
-              </p>
-            </div>
-          </BlurFade>
-        </div>
       </div>
 
       {/* Stats row */}
       <BlurFade delay={0.35} inView>
         <div className="rule mb-12" />
-        <div className="grid grid-cols-3 gap-8 mb-12">
+        <div className="mb-12 grid gap-8 sm:grid-cols-3">
           {[
             { value: "5+", label: "Projects Completed" },
             { value: "15+", label: "Technologies Used" },
@@ -113,14 +152,19 @@ export default function About() {
       <BlurFade delay={0.4} inView>
         <div className="mt-12">
           <p className="section-label mb-6">What I Value</p>
-          <div className="flex flex-wrap gap-2">
-            {values.map((v) => (
-              <span
+          <div className="grid gap-3 md:grid-cols-2">
+            {values.map((v, index) => (
+              <div
                 key={v}
-                className="tech-tag hover:border-primary hover:text-foreground transition-colors"
+                className="flex items-center justify-between border-b border-border py-3"
               >
-                {v}
-              </span>
+                <span className="section-label text-primary/70">
+                  0{index + 1}
+                </span>
+                <span className="text-right text-sm text-muted-foreground">
+                  {v}
+                </span>
+              </div>
             ))}
           </div>
         </div>

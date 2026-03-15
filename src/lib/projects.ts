@@ -65,4 +65,22 @@ export const projects: Project[] = [
     myRole:
       "Solo Developer – Designed and built the entire application including drag-and-drop system, formation presets, image export, and responsive UI.",
   },
+  {
+    id: "project-3",
+    title: "Create React Tailwind",
+    description: "Open-source starter tool for React + Tailwind projects.",
+    longDescription:
+      "A small developer tooling project that helps bootstrap React projects with Tailwind set up from the start. Built to make setup faster, cleaner, and more consistent instead of repeating the same manual scaffolding steps each time.",
+    technologies: ["React", "Tailwind CSS", "JavaScript", "CLI", "Open Source"],
+    githubUrl: "https://github.com/Oudom-Open/create-react-tailwind",
+    liveUrl: "https://crt.oudom.dev/",
+    imageUrl: {
+      light: "/images/projects/create-react-tailwind.png",
+      dark: "/images/projects/create-react-tailwind.png",
+    },
+    type: "frontend",
+    teamSize: 1,
+    myRole:
+      "Solo Developer – Built the starter tooling and the companion site used to explain and present it.",
+  },
 ];

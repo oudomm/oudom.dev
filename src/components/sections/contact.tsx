@@ -48,55 +48,67 @@ export default function Contact() {
 
       <div className="rule mb-16" />
 
-      {/* Big email CTA */}
-      <BlurFade delay={0.15} inView>
-        <div className="mb-16">
-          <p className="section-label mb-6">
-            I&apos;m looking for my first role. Junior, backend-leaning, open to full-stack.
-          </p>
-          <a
-            href="mailto:oudomphoem@gmail.com"
-            className="contact-email break-all sm:break-normal"
-          >
-            oudomphoem@gmail.com
-          </a>
-        </div>
-      </BlurFade>
-
-      {/* Social links table */}
-      <BlurFade delay={0.25} inView>
-        <div className="rule mb-0" />
-        {socials.map(({ label, value, href, icon: Icon }) => (
-          <div
-            key={label}
-            className="group flex flex-col items-start gap-3 border-b border-border py-5 sm:flex-row sm:items-center sm:justify-between"
-          >
-            <div className="flex items-center gap-4">
-              <Icon className="h-4 w-4 text-muted-foreground/50 group-hover:text-primary transition-colors" />
-              <p className="section-label">{label}</p>
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,30rem)] lg:items-start">
+        <BlurFade delay={0.15} inView>
+          <div className="space-y-8">
+            <div>
+              <p className="section-label mb-6">
+                I&apos;m looking for my first role. Junior, backend-leaning,
+                open to full-stack.
+              </p>
+              <a
+                href="mailto:oudomphoem@gmail.com"
+                className="contact-email break-all sm:break-normal"
+              >
+                oudomphoem@gmail.com
+              </a>
             </div>
-            <a
-              href={href}
-              target={href.startsWith("mailto") ? undefined : "_blank"}
-              rel="noopener noreferrer"
-              className="max-w-full break-all text-left text-sm text-muted-foreground transition-colors hover:text-foreground sm:text-right sm:break-normal"
-            >
-              {value}
-            </a>
-          </div>
-        ))}
 
-        {/* Location row */}
-        <div className="flex flex-col items-start gap-3 border-b border-border py-5 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-4">
-            <MapPin className="h-4 w-4 text-muted-foreground/50" />
-            <p className="section-label">Location</p>
+            <div className="border border-border bg-muted/20 p-5">
+              <p className="section-label mb-3">Best Fit</p>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Teams that care about fundamentals, clean communication, and
+                software that still makes sense six months later.
+              </p>
+            </div>
           </div>
-          <p className="text-left text-sm text-muted-foreground sm:text-right">
-            Phnom Penh, Cambodia
-          </p>
-        </div>
-      </BlurFade>
+        </BlurFade>
+
+        <BlurFade delay={0.25} inView>
+          <div>
+            <div className="rule mb-0" />
+            {socials.map(({ label, value, href, icon: Icon }) => (
+              <div
+                key={label}
+                className="group flex flex-col items-start gap-3 border-b border-border py-5 sm:flex-row sm:items-center sm:justify-between"
+              >
+                <div className="flex items-center gap-4">
+                  <Icon className="h-4 w-4 text-muted-foreground/50 group-hover:text-primary transition-colors" />
+                  <p className="section-label">{label}</p>
+                </div>
+                <a
+                  href={href}
+                  target={href.startsWith("mailto") ? undefined : "_blank"}
+                  rel="noopener noreferrer"
+                  className="max-w-full break-all text-left text-sm text-muted-foreground transition-colors hover:text-foreground sm:text-right sm:break-normal"
+                >
+                  {value}
+                </a>
+              </div>
+            ))}
+
+            <div className="flex flex-col items-start gap-3 border-b border-border py-5 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex items-center gap-4">
+                <MapPin className="h-4 w-4 text-muted-foreground/50" />
+                <p className="section-label">Location</p>
+              </div>
+              <p className="text-left text-sm text-muted-foreground sm:text-right">
+                Phnom Penh, Cambodia
+              </p>
+            </div>
+          </div>
+        </BlurFade>
+      </div>
 
       {/* Availability */}
       <BlurFade delay={0.35} inView>

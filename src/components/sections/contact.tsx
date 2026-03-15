@@ -54,7 +54,10 @@ export default function Contact() {
           <p className="section-label mb-6">
             I&apos;m looking for my first role. Junior, backend-leaning, open to full-stack.
           </p>
-          <a href="mailto:oudomphoem@gmail.com" className="contact-email">
+          <a
+            href="mailto:oudomphoem@gmail.com"
+            className="contact-email break-all sm:break-normal"
+          >
             oudomphoem@gmail.com
           </a>
         </div>
@@ -66,7 +69,7 @@ export default function Contact() {
         {socials.map(({ label, value, href, icon: Icon }) => (
           <div
             key={label}
-            className="flex items-center justify-between border-b border-border py-5 group"
+            className="group flex flex-col items-start gap-3 border-b border-border py-5 sm:flex-row sm:items-center sm:justify-between"
           >
             <div className="flex items-center gap-4">
               <Icon className="h-4 w-4 text-muted-foreground/50 group-hover:text-primary transition-colors" />
@@ -76,7 +79,7 @@ export default function Contact() {
               href={href}
               target={href.startsWith("mailto") ? undefined : "_blank"}
               rel="noopener noreferrer"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="max-w-full break-all text-left text-sm text-muted-foreground transition-colors hover:text-foreground sm:text-right sm:break-normal"
             >
               {value}
             </a>
@@ -84,12 +87,14 @@ export default function Contact() {
         ))}
 
         {/* Location row */}
-        <div className="flex items-center justify-between border-b border-border py-5">
+        <div className="flex flex-col items-start gap-3 border-b border-border py-5 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
             <MapPin className="h-4 w-4 text-muted-foreground/50" />
             <p className="section-label">Location</p>
           </div>
-          <p className="text-sm text-muted-foreground">Phnom Penh, Cambodia</p>
+          <p className="text-left text-sm text-muted-foreground sm:text-right">
+            Phnom Penh, Cambodia
+          </p>
         </div>
       </BlurFade>
 

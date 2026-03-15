@@ -260,12 +260,17 @@ html {
   /* Skill row hover highlight */
   .skill-row {
     display: grid;
-    grid-template-columns: 10rem 1fr;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     align-items: baseline;
     padding: 1rem 0;
     border-bottom: 1px solid var(--border);
     transition: background 200ms;
+  }
+  @media (min-width: 640px) {
+    .skill-row {
+      grid-template-columns: 10rem 1fr;
+    }
   }
   .skill-row:last-child {
     border-bottom: none;

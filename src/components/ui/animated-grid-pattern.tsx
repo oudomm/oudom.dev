@@ -48,22 +48,22 @@ export function AnimatedGridPattern({
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
   const [squares, setSquares] = useState<Array<Square>>([])
 
-  const getPos = useCallback((): [number, number] => {
+  const getPos = useCallback((gridWidth = dimensions.width, gridHeight = dimensions.height): [number, number] => {
     return [
-      Math.floor((Math.random() * dimensions.width) / width),
-      Math.floor((Math.random() * dimensions.height) / height),
+      Math.floor((Math.random() * gridWidth) / width),
+      Math.floor((Math.random() * gridHeight) / height),
     ]
   }, [dimensions.height, dimensions.width, height, width])
 
   const generateSquares = useCallback(
-    (count: number) => {
+    (count: number, gridWidth = dimensions.width, gridHeight = dimensions.height) => {
       return Array.from({ length: count }, (_, i) => ({
         id: i,
-        pos: getPos(),
+        pos: getPos(gridWidth, gridHeight),
         iteration: 0,
       }))
     },
-    [getPos]
+    [dimensions.height, dimensions.width, getPos]
   )
 
   const updateSquarePosition = useCallback(
@@ -86,12 +86,6 @@ export function AnimatedGridPattern({
   )
 
   useEffect(() => {
-    if (dimensions.width && dimensions.height) {
-      setSquares(generateSquares(numSquares))
-    }
-  }, [dimensions.width, dimensions.height, generateSquares, numSquares])
-
-  useEffect(() => {
     const element = containerRef.current
     if (!element) return
 
@@ -106,6 +100,9 @@ export function AnimatedGridPattern({
           ) {
             return currentDimensions
           }
+          if (nextWidth && nextHeight) {
+            setSquares(generateSquares(numSquares, nextWidth, nextHeight))
+          }
           return { width: nextWidth, height: nextHeight }
         })
       }
@@ -116,7 +113,7 @@ export function AnimatedGridPattern({
     return () => {
       resizeObserver.disconnect()
     }
-  }, [])
+  }, [generateSquares, numSquares])
 
   return (
     <svg

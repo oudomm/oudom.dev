@@ -94,7 +94,7 @@ export default function BentoGrid() {
               <a href="mailto:oudomphoem@gmail.com" className="bg-secondary hover:bg-secondary/80 flex h-9 w-9 items-center justify-center rounded-full transition-colors"><Mail className="h-4 w-4" /></a>
             </div>
             <div className="border-border/60 border-t pt-4">
-              <p className="text-muted-foreground mb-1 text-xs">Let's work together</p>
+              <p className="text-muted-foreground mb-1 text-xs">Let&apos;s work together</p>
               <a href="mailto:oudomphoem@gmail.com" className="text-primary hover:underline text-sm font-medium">
                 oudomphoem@gmail.com
               </a>

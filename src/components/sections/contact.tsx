@@ -1,4 +1,5 @@
 import { BlurFade } from "@/components/ui/blur-fade";
+import CurrentYear from "@/components/current-year";
 import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
 
 const socials = [
@@ -112,7 +113,9 @@ export default function Contact() {
           >
             OUDOM PHOEM
           </p>
-          <p className="section-label">© {new Date().getFullYear()} · Full-Stack Developer</p>
+          <p className="section-label">
+            © <CurrentYear /> · Full-Stack Developer
+          </p>
         </div>
       </BlurFade>
     </section>

@@ -35,15 +35,26 @@ export const AnimatedThemeToggler = ({
     return () => observer.disconnect();
   }, []);
 
+  const applyTheme = useCallback((nextIsDark: boolean) => {
+    setIsDark(nextIsDark);
+    document.documentElement.classList.toggle("dark", nextIsDark);
+    localStorage.setItem("theme", nextIsDark ? "dark" : "light");
+  }, []);
+
   const toggleTheme = useCallback(async () => {
     if (!buttonRef.current) return;
 
-    await document.startViewTransition(() => {
+    const newTheme = !isDark;
+    const startViewTransition = document.startViewTransition?.bind(document);
+
+    if (!startViewTransition) {
+      applyTheme(newTheme);
+      return;
+    }
+
+    await startViewTransition(() => {
       flushSync(() => {
-        const newTheme = !isDark;
-        setIsDark(newTheme);
-        document.documentElement.classList.toggle("dark");
-        localStorage.setItem("theme", newTheme ? "dark" : "light");
+        applyTheme(newTheme);
       });
     }).ready;
 
@@ -69,7 +80,7 @@ export const AnimatedThemeToggler = ({
         pseudoElement: "::view-transition-new(root)",
       },
     );
-  }, [isDark, duration]);
+  }, [applyTheme, isDark, duration]);
 
   return (
     <button

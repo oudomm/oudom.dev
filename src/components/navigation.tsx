@@ -39,7 +39,7 @@ export default function Navigation() {
               <Github className="h-4 w-4" />
             </a>
             <a
-              href="https://linkedin.com/in/oudomm"
+              href="https://linkedin.com/in/oudomdev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/40 hover:text-foreground transition-colors"

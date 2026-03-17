@@ -17,8 +17,8 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/oudomm",
-    href: "https://linkedin.com/in/oudomm",
+    value: "linkedin.com/in/oudomdev",
+    href: "https://linkedin.com/in/oudomdev",
     icon: Linkedin,
   },
   {
@@ -64,9 +64,9 @@ export default function Contact() {
               </a>
             </div>
 
-            <div className="border border-border bg-muted/20 p-5">
+            <div className="border-border bg-muted/20 border p-5">
               <p className="section-label mb-3">Best Fit</p>
-              <p className="text-sm leading-relaxed text-muted-foreground">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Teams that care about fundamentals, clean communication, and
                 software that still makes sense six months later.
               </p>
@@ -80,29 +80,29 @@ export default function Contact() {
             {socials.map(({ label, value, href, icon: Icon }) => (
               <div
                 key={label}
-                className="group flex flex-col items-start gap-3 border-b border-border py-5 sm:flex-row sm:items-center sm:justify-between"
+                className="group border-border flex flex-col items-start gap-3 border-b py-5 sm:flex-row sm:items-center sm:justify-between"
               >
                 <div className="flex items-center gap-4">
-                  <Icon className="h-4 w-4 text-muted-foreground/50 group-hover:text-primary transition-colors" />
+                  <Icon className="text-muted-foreground/50 group-hover:text-primary h-4 w-4 transition-colors" />
                   <p className="section-label">{label}</p>
                 </div>
                 <a
                   href={href}
                   target={href.startsWith("mailto") ? undefined : "_blank"}
                   rel="noopener noreferrer"
-                  className="max-w-full break-all text-left text-sm text-muted-foreground transition-colors hover:text-foreground sm:text-right sm:break-normal"
+                  className="text-muted-foreground hover:text-foreground max-w-full text-left text-sm break-all transition-colors sm:text-right sm:break-normal"
                 >
                   {value}
                 </a>
               </div>
             ))}
 
-            <div className="flex flex-col items-start gap-3 border-b border-border py-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="border-border flex flex-col items-start gap-3 border-b py-5 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-4">
-                <MapPin className="h-4 w-4 text-muted-foreground/50" />
+                <MapPin className="text-muted-foreground/50 h-4 w-4" />
                 <p className="section-label">Location</p>
               </div>
-              <p className="text-left text-sm text-muted-foreground sm:text-right">
+              <p className="text-muted-foreground text-left text-sm sm:text-right">
                 Phnom Penh, Cambodia
               </p>
             </div>
@@ -114,7 +114,7 @@ export default function Contact() {
       <BlurFade delay={0.35} inView>
         <div className="mt-16 flex flex-wrap items-center gap-3">
           <span className="avail-dot" />
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             Open to full-time roles — remote, on-site, or hybrid.
           </p>
         </div>

@@ -19,7 +19,11 @@ export const skillsData: SkillCategory[] = [
   },
   {
     category: "Backend",
-    skills: [{ name: "Spring Boot", url: "/images/skills/spring-boot.svg" }],
+    skills: [
+      { name: "Spring Boot", url: "/images/skills/spring-boot.svg" },
+      { name: "Spring WebFlux", url: "/images/skills/spring.svg" },
+      { name: "Spring Cloud", url: "/images/skills/spring.svg" },
+    ],
   },
   {
     category: "Databases",
@@ -33,16 +37,14 @@ export const skillsData: SkillCategory[] = [
     skills: [
       { name: "Git", url: "/images/skills/git.svg" },
       { name: "GitHub", url: "/images/skills/github.svg" },
+      { name: "Docker", url: "/images/skills/docker.svg" },
+      { name: "Jenkins", url: "/images/skills/jenkins.svg" },
+      { name: "Linux", url: "/images/skills/linux.svg" },
       { name: "Google Cloud", url: "/images/skills/google-cloud.svg" },
     ],
   },
 ];
 
 export const learningSkills: Skill[] = [
-  { name: "Spring Microservices", url: "/images/skills/spring.svg" },
-  {name: "Microfrontends", url: "/images/skills/microfrontend.webp"},
-  {name: "Linux", url: "/images/skills/linux.svg"},
-  {name: "Docker", url: "/images/skills/docker.svg"},
-  {name: "Networking", url: "/images/skills/networking.png"},
-
+  { name: "Web Security", url: "/images/skills/web-security.svg" },
 ];

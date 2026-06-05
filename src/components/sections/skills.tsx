@@ -54,7 +54,7 @@ export default function Skills() {
                   return (
                     <div
                       key={skill.name}
-                      className="group flex items-center gap-2 border border-transparent pr-3 transition-colors hover:border-border"
+                      className="group flex items-center gap-2 border border-transparent pr-3 transition-colors"
                     >
                       <div
                         className={`flex h-5 w-5 items-center justify-center flex-shrink-0 ${
@@ -115,9 +115,12 @@ export default function Skills() {
       <BlurFade delay={0.6} inView>
         <div className="mt-16 grid gap-6 border-t border-border pt-8 md:grid-cols-3">
           {[
-            ["Languages", "TypeScript · JavaScript · Java · Python"],
-            ["Paradigms", "REST · Microservices · Microfrontends"],
-            ["Environment", "Linux · Docker · Google Cloud"],
+            ["Languages", "Java · TypeScript · JavaScript · SQL"],
+            [
+              "Paradigms",
+              "Reactive Programming · Microservices · Event-Driven Architecture",
+            ],
+            ["Environment", "Docker · Linux · Google Cloud · GitHub Actions"],
           ].map(([label, items]) => (
             <div key={label} className="border-l border-border pl-4">
               <p className="section-label mb-1">{label}</p>

@@ -15,6 +15,36 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "project-1",
+    title: "AuthGate",
+    description: "Multi-tenant identity and API gateway platform.",
+    longDescription:
+      "A multi-tenant developer platform that combines identity and access management, configurable API gateways, BFF sessions, and secure tunnels. Developers can register services and routes, choose public or protected access, and secure APIs with OAuth2, JWT, API keys, or Basic Auth.",
+    technologies: [
+      "Spring Boot",
+      "Spring WebFlux",
+      "Spring Cloud Gateway",
+      "R2DBC",
+      "PostgreSQL",
+      "Redis",
+      "Apache Kafka",
+      "Axon Framework",
+      "Next.js",
+      "Docker",
+      "Google Cloud",
+    ],
+    githubUrl: "https://github.com/oudomm",
+    liveUrl: "https://authgate.site",
+    imageUrl: {
+      light: "/images/projects/authgate-light.png",
+      dark: "/images/projects/authgate-dark.png",
+    },
+    type: "fullstack",
+    teamSize: 9,
+    myRole:
+      "Backend / Full-stack Developer – Built Consumer Service authentication flows and contributed to gateway runtime, OAuth2/BFF integration, multi-tenant security, frontend features, and deployment.",
+  },
+  {
+    id: "project-2",
     title: "Endora",
     description: "Schema-based Backend-as-a-Service platform.",
     longDescription:
@@ -40,8 +70,9 @@ export const projects: Project[] = [
     myRole:
       "Full-stack Developer – Built AI scraper chatbot, integrated PostgreSQL, developed frontend features, and managed deployment.",
   },
+
   {
-    id: "project-2",
+    id: "project-3",
     title: "LineupLab",
     description: "Football lineup builder and formation creator.",
     longDescription:
@@ -66,7 +97,7 @@ export const projects: Project[] = [
       "Solo Developer – Designed and built the entire application including drag-and-drop system, formation presets, image export, and responsive UI.",
   },
   {
-    id: "project-3",
+    id: "project-4",
     title: "Create React Tailwind",
     description: "Open-source starter tool for React + Tailwind projects.",
     longDescription:

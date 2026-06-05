@@ -18,9 +18,9 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: "Oudom — Full-Stack Developer",
+  title: "Oudom — Back-End Developer",
   description:
-    "Full-stack developer building scalable backend systems and clean web applications that solve real problems.",
+    "Back-end developer building secure, reactive microservices and API gateway platforms with Spring Boot, WebFlux, and event-driven architecture.",
 };
 
 export default function RootLayout({

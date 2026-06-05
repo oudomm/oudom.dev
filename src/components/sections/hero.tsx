@@ -1,14 +1,14 @@
 import { BlurFade } from "@/components/ui/blur-fade";
 
 const techStack = [
-  "Next.js",
+  "Java",
   "Spring Boot",
-  "TypeScript",
-  "React",
+  "Spring WebFlux",
   "PostgreSQL",
-  "MongoDB",
+  "Apache Kafka",
   "Docker",
-  "Google Cloud",
+  "Next.js",
+  "TypeScript",
 ];
 
 export default function Hero() {
@@ -49,7 +49,7 @@ export default function Hero() {
               className="font-display text-foreground"
               style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)" }}
             >
-              FULL-STACK DEVELOPER
+              BACK-END DEVELOPER
             </p>
           </div>
         </BlurFade>
@@ -81,8 +81,9 @@ export default function Hero() {
       <div className="mb-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <BlurFade delay={0.32} inView>
           <p className="max-w-sm text-base leading-relaxed text-muted-foreground">
-            Full-stack developer focused on backend systems. Building with Spring
-          Boot, Next.js, and whatever the problem needs.
+            Backend developer focused on secure, reactive systems. Building with
+            Spring Boot, WebFlux, event-driven architecture, and the tools each
+            problem actually needs.
           </p>
         </BlurFade>
 

@@ -35,6 +35,8 @@ export default function Projects() {
 }
 
 function ProjectEntry({ project, index }: { project: Project; index: number }) {
+  const [role, contribution] = project.myRole.split("–").map((part) => part.trim());
+
   return (
     <div className="group border-b border-border py-14 last:border-b-0">
       <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
@@ -66,7 +68,7 @@ function ProjectEntry({ project, index }: { project: Project; index: number }) {
             <div className="mb-6 grid grid-cols-2 gap-4">
               <div>
                 <p className="section-label mb-1">My Role</p>
-                <p className="text-sm text-foreground/70">{project.myRole.split("–")[0].trim()}</p>
+                <p className="text-sm text-foreground/70">{role}</p>
               </div>
               <div>
                 <p className="section-label mb-1">Team</p>
@@ -76,6 +78,12 @@ function ProjectEntry({ project, index }: { project: Project; index: number }) {
                 </p>
               </div>
             </div>
+
+            {contribution && (
+              <p className="mb-6 border-l border-primary/50 pl-4 text-sm leading-relaxed text-muted-foreground">
+                {contribution}
+              </p>
+            )}
 
             {/* Tech tags */}
             <div className="flex flex-wrap gap-1.5">
